@@ -12,7 +12,7 @@ from keras.preprocessing.image import img_to_array
 from keras.applications.vgg16 import preprocess_input #preprocess to extract features
 from keras.models import Model #to include layers needed.
 from keras.preprocessing.sequence import pad_sequences
-import keras
+#import keras
 from numpy import argmax
 from keras.models import load_model
 
@@ -20,7 +20,8 @@ from keras.models import load_model
 # In[2]:
 
 
-model = load_model('new_model_2.h5')
+model = load_model('new_model_4.h5')
+
 
 
 # In[3]:
@@ -29,9 +30,11 @@ model = load_model('new_model_2.h5')
 def extract_features_test(filename):
 # load the model
     model = VGG16()
+    
 # re-structure the model
     model.layers.pop()
     model = Model(inputs=model.inputs, outputs=model.layers[-1].output)
+    
 # load the photo
     image = load_img(filename, target_size=(224, 224))
 # convert the image pixels to a numpy array
