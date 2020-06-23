@@ -1,0 +1,19 @@
+#title{
+    text-align: center;
+}
+img{
+    vertical-align: middle;
+    border-style: none;
+    width: 300px;
+    height: 300px;
+    margin-left: 600px;
+    border: 5px solid black;
+}
+#cap{
+margin-bottom: .5rem;
+font-weight: 500;
+line-height: 1.2;
+}
+body{
+    background: black;
+}
